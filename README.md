@@ -3,6 +3,8 @@
     <a href="#inicio">PHP-Laravel-Apuntes</a>
     <li><a href="#instalacionComposer">Instalación del Proyecto con Composer</a></li>
     <li><a href="#instalacionJetstream">Instalación de Jetstream</a></li>
+    <li><a href="#instalacionLaravelCollective-Html">Instalación de LaravelCollective-Html</a></li>
+    <li><a href="#instalacionSpatie-LaravelPermission">Instalación de Spatie-LaravelPermission</a></li>
     <li>
         <a href="#instalacionesAdicionales">Instalaciones Adicionales</a>
         <ul>
@@ -22,7 +24,8 @@
 <p>Aqui te dejo la [guia de la documentación oficial](https://laravel.com/docs/8.x/installation) para instalar un nuevo proyecto de Laravel.</p>
 <p>El comando utilizado para crear este proyecto:</p>
 <code>
-    composer create-project laravel/laravel "Apuntes Laravel"
+    composer create-project laravel/laravel "Apuntes Laravel" <br>
+    php artisan storage:link // Este comando dentro de la carpeta del proyecto
 </code>
 <p></p>
 
@@ -46,6 +49,24 @@
     composer require jeroennoten/laravel-adminlte <br>
     php artisan adminlte:install <br>
     php artisan adminlte:plugins install
+</code>
+<p></p>
+
+<h2>Instalación de LaravelCollective-Html <a name="instalacionLaravelCollective-Html"></a></h2>
+<p>Para una correcta instalación de LaravelCollective-Html seguir su <a href="https://laravelcollective.com/docs/6.x/html">documentación oficial</a>.</p>
+<p>Los comandos usados en este proyecto son:</p>
+<code>
+    composer require laravelcollective/html
+</code>
+<p></p>
+
+<h2>Instalación de Spatie-LaravelPermission <a name="instalacionSpatie-LaravelPermission"></a></h2>
+<p>Para una correcta instalación de Spatie-LaravelPermission seguir su <a href="https://spatie.be/docs/laravel-permission/v4/introduction">documentación oficial</a>.</p>
+<p>Los comandos usados en este proyecto son:</p>
+<code>
+    composer require spatie/laravel-permission <br>
+    php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" <br>
+    php artisan migrate
 </code>
 <p></p>
 
