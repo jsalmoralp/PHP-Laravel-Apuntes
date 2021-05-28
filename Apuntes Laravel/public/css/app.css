@@ -33348,18 +33348,26 @@ select {
   padding-right: 0.5rem;
 }
 
-@media(min-width:640px) {
+@media(min-width:640 px) {
   .container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 }
 
-@media(min-width:1024px) {
+@media(min-width:1024 px) {
   .container {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+}
+
+.facebook-color {
+  background-color: #3b5998;
+}
+
+.google-color {
+  background-color: #db4a39;
 }
 
 @media (min-width: 640px) {

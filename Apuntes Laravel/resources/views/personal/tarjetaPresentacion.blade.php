@@ -11,10 +11,10 @@
                     <h2 class="mt-2 text-4xl font-bold leading-8 text-purple-500">
                         Mis redes:
                         <a href="https://www.linkedin.com/in/jsalmoralp/" class="inline-block">
-                            <img class="object-cover object-center" height="40px" width="40px" src="/images/in_de_linkedin_foreground.png" alt="LinkedIn Logo">
+                            <img class="object-cover object-center w-10 h-10" src="/images/linkedin.png" alt="LinkedIn Logo">
                         </a>
                         <a href="https://github.com/jsalmoralp" class="inline-block">
-                            <img class="object-cover object-center" height="40px" width="40px" src="/images/logo_github_foreground.png" alt="GitHub Logo">
+                            <img class="object-cover object-center w-10 h-10" src="/images/github.png" alt="GitHub Logo">
                         </a>
                     </h2>
                 </div>

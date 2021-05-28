@@ -1,10 +1,12 @@
 <h2>Menu <a name="menu"></a></h2>
 <ul>
     <a href="#inicio">PHP-Laravel-Apuntes</a>
+    <li><a href="#instalacionPHP7.4">Instalación de PHP7.4 para Composer</a></li>
     <li><a href="#instalacionComposer">Instalación del Proyecto con Composer</a></li>
     <li><a href="#instalacionJetstream">Instalación de Jetstream</a></li>
     <li><a href="#instalacionLaravelCollective-Html">Instalación de LaravelCollective-Html</a></li>
     <li><a href="#instalacionSpatie-LaravelPermission">Instalación de Spatie-LaravelPermission</a></li>
+    <li><a href="#instalacionLaravel-Socialite">Instalación de Laravel-Socialite</a></li>
     <li>
         <a href="#instalacionesAdicionales">Instalaciones Adicionales</a>
         <ul>
@@ -16,6 +18,15 @@
 
 <h1>PHP-Laravel-Apuntes <a name="inicio"></a></h1>
 <p>Este es mi proyecto base y proyecto para tener códigos de ejemplo en Laravel.</p>
+
+<h2>Instalación de PHP7.4 para Composer <a name="instalacionPHP7.4"></a></h2>
+<p>Para poder utilizar Composer a sus plenas capacidades, deberemos tener instalados los siguientes paquetes de PHP:</p>
+<code>
+sudo apt-get install php7.4-intl php7.4-bcmath php7.4-common php7.4-json php7.4-mbstring openssl php7.4-xml </br>
+sudo apt-get install php7.4-soap php7.4-curl </br>
+sudo apt-get install php7.4-mysql
+</code>
+<p></p>
 
 <h2>Instalación del Proyecto con Composer <a name="instalacionComposer"></a></h2>
 <p>Primero descargamos <a href="https://getcomposer.org/download/">Composer</a>, que será el manejador de dependencias que usaremos a la hora de instalar/actualizar nuestro proyecto/dependencias/plugins, para nuestro proyecto en Laravel.</p>
@@ -67,6 +78,14 @@
     composer require spatie/laravel-permission <br>
     php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" <br>
     php artisan migrate
+</code>
+<p></p>
+
+<h2>Instalación de Laravel-Socialite <a name="instalacionLaravel-Socialite"></a></h2>
+<p>Para una correcta instalación de Laravel-Socialite seguir su <a href="https://laravel.com/docs/8.x/socialite">documentación oficial</a>.</p>
+<p>Los comandos usados en este proyecto son:</p>
+<code>
+    composer require laravel/socialite
 </code>
 <p></p>
 

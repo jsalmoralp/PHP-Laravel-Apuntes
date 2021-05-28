@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
-
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,3 +34,9 @@ Route::get('/homeLaravel', [HomeController::class, 'homeLaravel'])
 
 Route::get('/homeJetstream', [HomeController::class, 'homeJetstream'])
     ->name('homeJetstream');
+
+Route::get('/login/{driver}', [LoginController::class, 'redirectToProvider'])
+    ->name('login.provider.redirect');
+
+Route::get('/login/{driver}/callback', [LoginController::class, 'handleProviderCallback'])
+    ->name('login.provider.callback');

@@ -1,15 +1,23 @@
 .container {
-    @apply max-w-7xl mx-auto px-2;
+    @apply px-2 mx-auto max-w-7xl;
 }
 
-@media(min-width:640px) {
+@media(min-width:640 px) {
     .container {
         @apply px-6;
     }
 }
 
-@media(min-width:1024px) {
+@media(min-width:1024 px) {
     .container {
         @apply px-8;
     }
+}
+
+.facebook-color {
+    background-color: #3b5998;
+}
+
+.google-color {
+    background-color: #db4a39;
 }

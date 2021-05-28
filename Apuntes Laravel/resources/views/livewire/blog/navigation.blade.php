@@ -104,10 +104,12 @@
                     <div x-show="open" x-on:click.away="open = false" class="absolute right-0 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                         <!-- Active: "bg-gray-100", Not Active: "" -->
                         <a href="{{ route('profile.show') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">
-                            Tu perfil
+                            {{__('words.your_profile')}}
                         </a>
                         @can('admin.home')
-                        <a href="{{ route('admin.home') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Panel de Administración</a>
+                        <a href="{{ route('admin.home') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">
+                            {{__('words.panel_admin')}}
+                        </a>
                         @endcan
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -115,7 +117,7 @@
                             onclick="
                                 event.preventDefault();
                                 this.closest('form').submit();">
-                                Cerrar Sesión
+                                {{__('words.logout')}}
                             </a>
                         </form>
                     </div>
@@ -125,10 +127,10 @@
             {{-- No autenticado --}}
             <div>
                 <a href="{{ route('login') }}" class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">
-                    Login
+                    {{__('words.login')}}
                 </a>
                 <a href="{{ route('register') }}" class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">
-                    Register
+                    {{__('words.rgister')}}
                 </a>
             </div>
             @endauth

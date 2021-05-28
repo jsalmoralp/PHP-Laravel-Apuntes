@@ -65,9 +65,14 @@ class User extends Authenticatable
      * Código que recupera la imagen del usuario.
      */
     public function adminlte_image() {
-        // TODO: Recuperar la imagen del usuario
+        $social_profile = $this->socialProfiles->first();
+        if($social_profile) {
+            return $social_profile->social_avatar;
 
-        return 'https://picsum.photos/300/300';
+        } else {
+            // TODO: Recuperar la imagen del usuario
+            return 'https://picsum.photos/300/300';
+        }
     }
 
     /**
@@ -96,4 +101,10 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    /**
+     * Relacion uno a muchos con el Perfil Social
+     */
+    public function socialProfiles() {
+        return $this->hasMany(SocialProfile::class);
+    }
 }
