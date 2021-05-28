@@ -10,6 +10,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
@@ -19,6 +20,7 @@ class User extends Authenticatable
     use HasTeams;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -85,6 +87,13 @@ class User extends Authenticatable
         // TODO: Recuperar el link del perfil del usuario
 
         return 'profile/username';
+    }
+
+    /**
+     * Relacion uno a muchos con Post
+     */
+    public function posts() {
+        return $this->hasMany(Post::class);
     }
 
 }

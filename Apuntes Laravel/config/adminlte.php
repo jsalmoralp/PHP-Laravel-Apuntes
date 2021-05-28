@@ -226,52 +226,166 @@ return [
 
     'menu' => [
         // Navbar items:
-        [
+        /* [
             'type'      => 'navbar-search',
             'text'      => 'search',
             'topnav'    => true,
-        ],
-        [
+        ], */
+        /* [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
-        ],
+        ], */
 
         // Userbar itens:
-        [
+        /* [
             'topnav_user'   => true,
             'text'          => 'Link 1',
             'url'           => '#'
-        ],
+        ], */
 
         // Sidebar items:
-        [
+        /* [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
-        ],
-        [
+        ], */
+        /* [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
+        ], */
+        [
+            'text'  => 'Panel de Administración',
+            'route' => 'admin.home',
+            'icon'  => 'fas fa-fw fa-user-shield',
+            'can'   => 'admin.home',
+        ],
+        [   'header'    => 'Administración de la Web',
+            'can'       => 'admin.admin',
         ],
         [
-            'text'        => 'Dashboard',
-            'route'         => 'dashboard',
-            'icon'        => 'far fa-fw fa-home',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text'      => 'Usuarios',
+            'icon'      => 'fas fa-fw fa-users',
+            'active'    => ['admin/admin/users*'],
+            'can'       => 'admin.admin.users',
+            'submenu'   => [
+                [
+                    'text'      => 'Listado de Usuarios',
+                    'route'     => 'admin.admin.users.index',
+                    'active'    => ['admin/admin/users'],
+                    'can'       => 'admin.admin.users.index',
+                ],
+                [
+                    'text'      => 'Crear Usuario',
+                    'route'     => 'admin.admin.users.create',
+                    'active'    => ['admin/admin/users/create'],
+                    'can'       => 'admin.admin.users.create',
+                ],
+            ],
         ],
-        ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text'      => 'Roles',
+            'icon'      => 'fas fa-fw fa-users-cog',
+            'active'    => ['admin/admin/roles*'],
+            'can'       => 'admin.admin.roles',
+            'submenu'   => [
+                [
+                    'text'      => 'Listado de Roles',
+                    'route'     => 'admin.admin.roles.index',
+                    'active'    => ['admin/admin/roles'],
+                    'can'       => 'admin.admin.roles.index',
+                ],
+                [
+                    'text'      => 'Crear Rol',
+                    'route'     => 'admin.admin.roles.create',
+                    'active'    => ['admin/admin/roles/create'],
+                    'can'       => 'admin.admin.roles.create',
+                ],
+            ],
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text'      => 'Permisos',
+            'icon'      => 'fas fa-fw fa-users', // TODO: Cambiar icono
+            'active'    => ['admin/admin/permissions*'],
+            'can'       => 'admin.admin.permissions',
+            'submenu'   => [
+                [
+                    'text'      => 'Listado de Permisos',
+                    'route'     => 'admin.admin.permissions.index',
+                    'active'    => ['admin/admin/permissions'],
+                    'can'       => 'admin.admin.permissions.index',
+                ],
+                [
+                    'text'      => 'Crear Permiso',
+                    'route'     => 'admin.admin.permissions.create',
+                    'active'    => ['admin/admin/permissions/create'],
+                    'can'       => 'admin.admin.permissions.create',
+                ],
+            ],
+        ],
+        [   'header'    => 'Administración del Blog',
+            'can'       => 'admin.blog',
         ],
         [
+            'text'      => 'Categorías',
+            'icon'      => 'fab fa-fw fa-buffer',
+            'active'    => ['admin/blog/categories*'],
+            'can'       => 'admin.blog.categories',
+            'submenu'   => [
+                [
+                    'text'      => 'Listado de Categorías',
+                    'route'     => 'admin.blog.categories.index',
+                    'active'    => ['admin/blog/categories'],
+                    'can'       => 'admin.blog.categories.index',
+                ],
+                [
+                    'text'      => 'Crear Categoría',
+                    'route'     => 'admin.blog.categories.create',
+                    'active'    => ['admin/blog/categories/create'],
+                    'can'       => 'admin.blog.categories.create',
+                ],
+            ],
+        ],
+        [
+            'text'      => 'Etiquetas',
+            'icon'      => 'far fa-fw fa-bookmark',
+            'active'    => ['admin/blog/tags*'],
+            'can'       => 'admin.blog.tags',
+            'submenu'   => [
+                [
+                    'text'      => 'Listado de Etiquetas',
+                    'route'     => 'admin.blog.tags.index',
+                    'active'    => ['admin/blog/tags'],
+                    'can'       => 'admin.blog.tags.index',
+                ],
+                [
+                    'text'      => 'Crear Etiqueta',
+                    'route'     => 'admin.blog.tags.create',
+                    'active'    => ['admin/blog/tags/create'],
+                    'can'       => 'admin.blog.tags.create',
+                ],
+            ],
+        ],
+        [
+            'text'      => 'Artículos',
+            'icon'      => 'fas fa-fw fa-clipboard', /* 'fas fa-fw fa-file' */
+            'active'    => ['admin/blog/posts*'],
+            'can'       => 'admin.blog.posts',
+            'submenu'   => [
+                [
+                    'text'      => 'Listado de Artículos',
+                    'route'     => 'admin.blog.posts.index',
+                    'active'    => ['admin/blog/posts'],
+                    'can'       => 'admin.blog.posts.index',
+                ],
+                [
+                    'text'      => 'Crear Artículo',
+                    'route'     => 'admin.blog.posts.create',
+                    'active'    => ['admin/blog/posts/create'],
+                    'can'       => 'admin.blog.posts.create',
+                ],
+            ],
+        ],
+        /* [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
@@ -324,7 +438,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ], */
     ],
 
     /*
@@ -446,5 +560,5 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Other-Configuration
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];
