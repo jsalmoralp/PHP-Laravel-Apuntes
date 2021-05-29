@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\SocialLoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 /*
@@ -35,8 +35,8 @@ Route::get('/homeLaravel', [HomeController::class, 'homeLaravel'])
 Route::get('/homeJetstream', [HomeController::class, 'homeJetstream'])
     ->name('homeJetstream');
 
-Route::get('/login/{driver}', [LoginController::class, 'redirectToProvider'])
+Route::get('/login/{driver}', [SocialLoginController::class, 'redirectToProvider'])
     ->name('login.provider.redirect');
 
-Route::get('/login/{driver}/callback', [LoginController::class, 'handleProviderCallback'])
+Route::get('/login/{driver}/callback', [SocialLoginController::class, 'handleProviderCallback'])
     ->name('login.provider.callback');

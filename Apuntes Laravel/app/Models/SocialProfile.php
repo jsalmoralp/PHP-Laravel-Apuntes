@@ -14,7 +14,7 @@ class SocialProfile extends Model
     /**
      * Relacion uno a muchos "inversa" con Usuario
      */
-    public function socialProfiles() {
+    public function user() {
         return $this->belongsTo(User::class);
     }
 }
