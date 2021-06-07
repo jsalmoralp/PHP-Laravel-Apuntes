@@ -4,14 +4,20 @@ use App\Http\Controllers\Blog\PostController;
 use Illuminate\Support\Facades\Route;
 
 
+/**
+ * Todos tienen:
+ *  - Prefix: "blog/"
+ *  - Name: "blog."
+ */
+
 Route::get('/', [PostController::class, 'index'])
-    ->name('blog.index');
+    ->name('index');
 
 Route::get('posts/{post}', [PostController::class, 'show'])
-    ->name('blog.show');
+    ->name('show');
 
 Route::get('category/{category}', [PostController::class, 'category'])
-    ->name('blog.category');
+    ->name('category');
 
 Route::get('tag/{tag}', [PostController::class, 'tag'])
-    ->name('blog.tag');
+    ->name('tag');

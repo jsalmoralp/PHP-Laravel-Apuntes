@@ -89,7 +89,7 @@
                             {{__('Profile')}}
                         </a>
                         <a href="{{ route('admin.home') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">
-                            {{__('basic.Panel of Administrator')}}
+                            {{__('Panel of Administrator')}}
                         </a>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf

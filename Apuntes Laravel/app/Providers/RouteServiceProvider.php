@@ -49,17 +49,20 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web', 'auth', 'can:admin')
                 ->prefix('admin')
+                ->name('admin.')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/admin.php'));
 
             Route::middleware('web')
                 ->prefix('blog')
+                ->name('blog')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/blog.php'));
 
             Route::middleware('web')
-                ->namespace($this->namespace)
+                ->prefix('riotAPI')
                 ->name('riotAPI.')
+                ->namespace($this->namespace)
                 ->group(base_path('routes/riotAPI.php'));
         });
     }

@@ -9,34 +9,40 @@ use App\Http\Controllers\Admin\Blog\TagController;
 use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Route;
 
+/**
+ * Todos tienen:
+ *  - Prefix: "admin/"
+ *  - Name: "admin."
+ */
+
 // Ruta del Home de Panel de Administración
 Route::get('/', [HomeController::class, 'home'])
     ->middleware('can:admin.home')
-    ->name('admin.home');
+    ->name('home');
 
 /**
  * Rutas para el Administrador
  */
 Route::resource('admin/users', UserController::class)
-    ->names('admin.admin.users');
+    ->names('admin.users');
 
 Route::resource('admin/roles', RoleController::class)
-    ->names('admin.admin.roles');
+    ->names('admin.roles');
 
 Route::resource('admin/permissions', PermissionController::class)
-    ->names('admin.admin.permissions');
+    ->names('admin.permissions');
 
 /**
  * Rutas para el Blog
  */
 Route::resource('blog/categories', CategoryController::class)
-    ->names('admin.blog.categories');
+    ->names('blog.categories');
 
 Route::resource('blog/tags', TagController::class)
-    ->names('admin.blog.tags');
+    ->names('blog.tags');
 
 Route::resource('blog/posts', PostController::class)
-    ->names('admin.blog.posts');
+    ->names('blog.posts');
 
 // [END] Rutas para el Blog
 

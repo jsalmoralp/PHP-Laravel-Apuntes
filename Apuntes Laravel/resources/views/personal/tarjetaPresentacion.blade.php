@@ -30,7 +30,7 @@
                     </h2>
                 </div>
             </article>
-            <article class="w-full bg-blue-500 bg-center bg-cover rounded-lg h-80">
+            <article class="w-full bg-gradient-to-br from-blue-600 to-blue-300 bg-center bg-cover rounded-lg h-80">
                 <div class="flex flex-col justify-center w-full h-full px-8">
                     <div>
                         <span class="inline-block px-3 text-black bg-purple-300 rounded-full h6">PHP</span>
@@ -41,7 +41,7 @@
                     </h2>
                 </div>
             </article>
-            <article class="w-full bg-yellow-500 bg-center bg-cover rounded-lg h-80">
+            <article class="w-full bg-gradient-to-br from-blue-600 to-yellow-500 bg-center bg-cover rounded-lg h-80">
                 <div class="flex flex-col justify-center w-full h-full px-8">
                     <div>
                         <span class="inline-block px-3 text-black bg-purple-300 rounded-full h6">Kotlin</span>
@@ -52,7 +52,7 @@
                     </h2>
                 </div>
             </article>
-            <article class="w-full bg-blue-500 bg-center bg-cover rounded-lg h-80">
+            <article class="w-full bg-gradient-to-br from-blue-600 to-blue-300 bg-center bg-cover rounded-lg h-80">
                 <div class="flex flex-col justify-center w-full h-full px-8">
                     <div>
                         <span class="inline-block px-3 text-black bg-purple-300 rounded-full h6">PHP</span>
@@ -63,7 +63,7 @@
                     </h2>
                 </div>
             </article>
-            <article class="w-full bg-blue-500 bg-center bg-cover rounded-lg h-80">
+            <article class="w-full bg-gradient-to-br from-blue-600 to-blue-300 bg-center bg-cover rounded-lg h-80">
                 <div class="flex flex-col justify-center w-full h-full px-8">
                     <div>
                         <span class="inline-block px-3 text-black bg-purple-300 rounded-full h6">PHP</span>
@@ -75,7 +75,7 @@
                     </h2>
                 </div>
             </article>
-            <article class="w-full bg-yellow-300 bg-center bg-cover rounded-lg h-80">
+            <article class="w-full bg-gradient-to-br from-yellow-600 to-yellow-200 bg-center bg-cover rounded-lg h-80">
                 <div class="flex flex-col justify-center w-full h-full px-8">
                     <div>
                         <span class="inline-block px-3 text-black bg-purple-300 rounded-full h6">JavaScript</span>
@@ -86,7 +86,7 @@
                     </h2>
                 </div>
             </article>
-            <article class="w-full bg-red-500 bg-center bg-cover rounded-lg h-80">
+            <article class="w-full bg-gradient-to-br from-red-400 to-blue-400 bg-center bg-cover rounded-lg h-80">
                 <div class="flex flex-col justify-center w-full h-full px-8">
                     <div>
                         <span class="inline-block px-3 text-black bg-purple-300 rounded-full h6">Java</span>
@@ -97,7 +97,7 @@
                     </h2>
                 </div>
             </article>
-            <article class="w-full bg-gad bg-yellow-300 bg-cover rounded-lg h-80">
+            <article class="w-full bg-gad bg-gradient-to-br from-blue-500 bg-yellow-300 bg-cover rounded-lg h-80">
                 <div class="flex flex-col justify-center w-full h-full px-8">
                     <div>
                         <span class="inline-block px-3 text-black bg-purple-300 rounded-full h6">Python</span>
