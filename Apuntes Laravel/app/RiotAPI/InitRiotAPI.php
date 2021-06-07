@@ -8,6 +8,7 @@ use RiotAPI\LeagueAPI\Definitions\Region;
 use RiotAPI\LeagueAPI\LeagueAPI;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 
+// Marcado para introducir archivo en el commit correcto
 class InitRiotAPI {
     public function start(
         Region $region = Region::EUROPE_WEST,

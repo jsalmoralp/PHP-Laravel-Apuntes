@@ -56,6 +56,11 @@ class RouteServiceProvider extends ServiceProvider
                 ->prefix('blog')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/blog.php'));
+
+            Route::middleware('web')
+                ->namespace($this->namespace)
+                ->name('riotAPI.')
+                ->group(base_path('routes/riotAPI.php'));
         });
     }
 
