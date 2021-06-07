@@ -12,9 +12,9 @@
 */
 
 return [
-    'reset'     => '¡Su contraseña ha sido restablecida!',
-    'sent'      => '¡Le hemos enviado por correo electrónico el enlace para restablecer su contraseña!',
-    'throttled' => 'Por favor espere antes de intentar de nuevo.',
-    'token'     => 'El token de restablecimiento de contraseña es inválido.',
-    'user'      => 'No encontramos ningún usuario con ese correo electrónico.',
+    'reset'     => 'Votre mot de passe a été réinitialisé !',
+    'sent'      => 'Nous vous avons envoyé par email le lien de réinitialisation du mot de passe !',
+    'throttled' => 'Veuillez patienter avant de réessayer.',
+    'token'     => 'Ce jeton de réinitialisation du mot de passe n\'est pas valide.',
+    'user'      => 'Aucun utilisateur n\'a été trouvé avec cette adresse email.',
 ];
