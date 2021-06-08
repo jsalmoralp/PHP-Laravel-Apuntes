@@ -1,6 +1,6 @@
 <h2>Menu <a name="menu"></a></h2>
 <ul>
-    <a href="#inicio">PHP-Laravel-Apuntes</a>
+    <a href="#inicio">PHP-Laravel-CodeKiller</a>
     <li><a href="#instalacionPHP7.4">Instalación de PHP7.4 para Composer</a></li>
     <li><a href="#instalacionComposer">Instalación del Proyecto con Composer</a></li>
     <li><a href="#instalacionJetstream">Instalación de Jetstream</a></li>
@@ -16,7 +16,7 @@
 </ul>
 
 
-<h1>PHP-Laravel-Apuntes <a name="inicio"></a></h1>
+<h1>PHP-Laravel-CodeKiller <a name="inicio"></a></h1>
 <p>Este es mi proyecto base y proyecto para tener códigos de ejemplo en Laravel.</p>
 
 <h2>Instalación de PHP7.4 para Composer <a name="instalacionPHP7.4"></a></h2>
@@ -35,7 +35,7 @@ sudo apt-get install php7.4-mysql
 <p>Aqui te dejo la [guia de la documentación oficial](https://laravel.com/docs/8.x/installation) para instalar un nuevo proyecto de Laravel.</p>
 <p>El comando utilizado para crear este proyecto:</p>
 <code>
-    composer create-project laravel/laravel "Apuntes Laravel" <br>
+    composer create-project laravel/laravel "CodeKiller" <br>
     php artisan storage:link // Este comando dentro de la carpeta del proyecto
 </code>
 <p></p>
